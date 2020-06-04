@@ -13,7 +13,4 @@ public interface KataRepository extends JpaRepository<UserAccount, Long> {
 
     @Override
     public <S extends UserAccount> S save(S entity);
-
-    @Override
-    Optional<UserAccount> findById(Long aLong);
 }
