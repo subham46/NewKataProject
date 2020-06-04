@@ -38,8 +38,8 @@ public class PersistanceAdapter implements SaveAccountPort, LoadAccountPort, Upd
     }
 
     @Override
-    public Optional<UserAccount> getAccount(Long acc_Id) {
-        Optional<UserAccount> ua = kataRepository.findById(acc_Id);
+    public UserAccount getAccount(Long acc_Id) {
+        UserAccount ua = kataRepository.findById(acc_Id).get();
         return  ua;
 
 

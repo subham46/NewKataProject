@@ -6,5 +6,5 @@ import java.util.Optional;
 
 public interface LoadAccountPort {
 
-    public Optional<UserAccount> getAccount(Long acc_Id);
+     UserAccount getAccount(Long acc_Id);
 }
