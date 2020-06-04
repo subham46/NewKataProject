@@ -1,15 +1,14 @@
 package com.hexagonal.kata.katahexa.infrastucture.adapter;
 
-import com.hexagonal.kata.katahexa.domain.domainentity.Transactions;
 import com.hexagonal.kata.katahexa.domain.port.inport.CreateAccountPort;
 import com.hexagonal.kata.katahexa.domain.port.inport.DepositInPort;
 import com.hexagonal.kata.katahexa.domain.port.inport.PrintHistoryPort;
 import com.hexagonal.kata.katahexa.domain.port.inport.WithrawalInPort;
 import com.hexagonal.kata.katahexa.infrastucture.TransactionType;
+import com.hexagonal.kata.katahexa.infrastucture.UserTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.transaction.Transaction;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -50,7 +49,7 @@ public class BankController {
     }
 
     @GetMapping(path ="{accountId}")
-    public List<Transactions> printHistory(@PathVariable(value = "accountId") Long acc_Id){
+    public List<UserTransaction> printHistory(@PathVariable(value = "accountId") Long acc_Id){
 
         return printHistoryPort.print(acc_Id, TransactionType.ALL);
 
