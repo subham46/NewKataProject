@@ -2,25 +2,24 @@ package com.hexagonal.kata.katahexa.infrastucture;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
-@Entity
-@Table
+
 @Getter
 @Setter
-public class UserAccount {
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+public class User {
     @Id
     private Long accountId;
 
-    @Column(name = "User_Name")
-    private String name;
+    private  String name;
 
-    @Column(name = "Account_Balance")
     private BigDecimal balance;
+
 }

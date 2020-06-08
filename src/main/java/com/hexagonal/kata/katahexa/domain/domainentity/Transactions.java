@@ -1,6 +1,6 @@
 package com.hexagonal.kata.katahexa.domain.domainentity;
 
-import com.hexagonal.kata.katahexa.infrastucture.TransactionType;
+import com.hexagonal.kata.katahexa.infrastucture.common.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

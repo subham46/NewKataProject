@@ -20,10 +20,5 @@ public class Account {
     private BigDecimal balance;
 
 
-    public void deposit(int amount){
-
-    }
-
-
 
 }
